@@ -14,8 +14,13 @@ from mpl_toolkits.mplot3d import Axes3D
 sm.init_printing(use_unicode=True)
 
 #%%
-def utility(x1,x2,rho):
-    return (x1**rho+x2**rho)**(1/rho)
+def utility(q1,q2,rho):
+    return (q1**rho+q2**rho)**(1/rho)
 
-def budgcons(,2,p1,p2):
-    return 
+def budgcons(q1,q2,p1,p2):
+    return q1*p1+q2*p2
+
+def consprob(q1,p1,p2,rho,Y):
+    (q1**rho+((Y-q1*p1)/p2)**rho)**(1/rho)
+
+
