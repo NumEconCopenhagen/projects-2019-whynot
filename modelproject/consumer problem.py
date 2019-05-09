@@ -26,11 +26,29 @@ utility=(q1**rho+q2**rho)**(1/rho)
 utility
 
 #%%
-utility=sm.Eq(q1**rho*q2**mu,U)
+utility=sm.Eq(log(q1)**rho*q2**mu,U)
 utility
 #%%
 budgcons=sm.Eq(p1*q1+p2*q2,I)
 budgcons
+#%%
+test= sm.Eq((q2**2/(q1+q2)**2)*p1-(q1**2/(q1+q2)**2)*p2,0)
+test
+#%%
+testsolveq2=sm.solve(test,q2)
+testsolveq2
+#%%
+testsolveq1=sm.solve(test,q1)
+testsolveq1
+#%%
+anden=sm.Eq(q1*p1+q1*sm.sqrt(p2/p1)*p2,I)
+anden
+#%%
+andensolve=sm.solve(anden,q1)
+anden
+#%%
+testsubs=budgcons.subs(q2,testsolveq2[0])
+testsubs
 #%%
 indiff=sm.solve(utility,q2)
 indiff
@@ -38,10 +56,10 @@ indiff
 q2_iso=sm.solve(budgcons,q2)
 q2_iso
 #%%
-def find_opt(p1,p2,I,rho,mu):
-#%%
 util_subs=utility.subs(q2,q2_iso[0])
 util_subs
+#%%
+def find_opt(p1,p2,I,rho,mu):
 #%%
 foc=sm.diff(util_subs,q1)
 foc
