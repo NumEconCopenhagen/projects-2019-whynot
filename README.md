@@ -10,3 +10,8 @@ A short description of the files and folders:
 * [/examproject](/examproject): Same structure as above.
 * [/modelproject](/modelproject): Same structure as above.
 * [.gitignore](/.gitignore): A textfile specifying files and folder that will not be uploaded to github, and will not be tracked by git.  
+
+
+This folder contains both dataproject (in the dataproject folder) and modelproject (in the modelproject folder) done through the semester with final touches made for the exam in addition to answers to the extra questions given for the exam (in the examproject folder)
+
+Furthermore a txt file is included with links to peerfeedback given to other projects by the groupmembers.

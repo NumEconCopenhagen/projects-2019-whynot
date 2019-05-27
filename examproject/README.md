@@ -1,3 +1,5 @@
 # Examproject
 
-Should contain a short introduction to your project, and show how to produce your results.
+Answer of examproject notebook given for exam.
+
+No external packages have been used to answer the questions in this notebook.
